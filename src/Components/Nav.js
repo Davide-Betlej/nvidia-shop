@@ -8,13 +8,13 @@ const Nav = () => {
     <div className="navWrapper">
       <nav className="navigation">
         <div className="logoH1">
-          <Link to="/">
+          <Link to="/nvidia-shop">
             <img src={`${logo}`} alt="" style={{ height: "75px" }} />
           </Link>
         </div>
         <div className="navListItems">
           <ul>
-            <Link to="/nvidia-shop">
+            <Link to="/shop">
               <li>Shop</li>
             </Link>
           </ul>
