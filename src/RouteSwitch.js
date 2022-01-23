@@ -13,7 +13,7 @@ const RouteSwitch = () => {
     <BrowserRouter>
       <Nav />
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/nvidia-shop" element={<Homepage />} />
         <Route path="/shop" element={<CategoryPage />} />
         <Route path="/shop/products/:productId" element={<ProductPage />} />
         <Route path="/shop/:categoryId" element={<CategoryPage />} />
