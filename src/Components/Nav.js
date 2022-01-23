@@ -14,7 +14,7 @@ const Nav = () => {
         </div>
         <div className="navListItems">
           <ul>
-            <Link to="/shop">
+            <Link to="/nvidia-shop">
               <li>Shop</li>
             </Link>
           </ul>
