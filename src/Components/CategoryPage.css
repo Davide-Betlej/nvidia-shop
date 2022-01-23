@@ -1,0 +1,153 @@
+body {
+  background: #f8f5f2;
+}
+
+.shopWrapper {
+  height: 100vh;
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.shopSide {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20vh 0;
+  margin-right: 50px;
+  justify-content: flex-start;
+}
+
+h1 {
+  font-family: "Segoe UI";
+  font-weight: 600;
+  font-size: 32px;
+  color: #231f20;
+}
+
+.shopCategories {
+  width: 100%;
+  padding: 120px 0 0;
+}
+
+.shopCategories li {
+  color: #231f20;
+  list-style: none;
+  line-height: 2.6rem;
+  font-size: 1.3rem;
+  font-family: "Segoe UI";
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.productLi {
+  list-style: none;
+  flex-direction: column;
+  margin: 0 27px 7rem 0;
+  width: max(18.229vw, 300px);
+  height: max(18.229vw, 300px);
+}
+
+.productContainer ul {
+  display: flex;
+
+  flex-wrap: wrap;
+}
+
+.productContainer {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding: 15vh 0 10vh 9vh;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.productImg {
+  position: relative;
+  width: max(18.229vw, 300px);
+  height: max(18.229vw, 300px);
+  overflow: hidden;
+}
+
+.productImg img {
+  position: absolute;
+  width: max(18.229vw, 300px);
+  height: max(18.229vw, 300px);
+  object-fit: contain;
+  background: #f2eeeb;
+}
+
+.productLi a {
+  text-decoration: none;
+}
+
+.productName {
+  color: #231f20;
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 20px 0 0;
+}
+
+.productPrice {
+  font-weight: 500;
+  padding: 12.333px 0 0;
+  font-size: 0.9rem;
+  color: #231f20;
+}
+
+@media (max-width: 780px) {
+  .shopSide {
+    width: 80%;
+    margin: 0 auto;
+    min-height: fit-content;
+    padding: 0;
+  }
+  .shopWrapper {
+    flex-direction: column;
+
+    width: 100%;
+  }
+  .productContainer ul {
+    padding: 0 20px;
+    justify-content: center;
+  }
+  .productLi {
+    margin: 0 10px 25px;
+    width: max(40vw, 150px);
+  }
+  .productImg {
+    position: relative;
+    width: max(40vw, 150px);
+    height: max(40vw, 150px);
+    overflow: hidden;
+  }
+  .productImg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: max(40vw, 150px);
+    height: max(40vw, 150px);
+  }
+  .productContainer {
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    padding: 10vh 0;
+  }
+  .shopCategories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+  }
+  .categoryH1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0 0 0;
+  }
+}

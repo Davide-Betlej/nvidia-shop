@@ -1,0 +1,37 @@
+.homepageWrapper {
+  background-size: cover;
+  background-position: center center;
+  min-height: 91.623vh;
+  padding: 160px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.homepageSectionBoxWrapper h1 {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 600;
+  font-family: "Segoe UI";
+}
+
+.homepageSectionBoxWrapper p {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 18px 0;
+  font-family: "Segoe UI";
+}
+
+.homepageSectionBoxWrapper button {
+  border: none;
+  background: #fff;
+  color: black;
+  padding: 16px 40px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
