@@ -7,17 +7,8 @@ const ProductPage = (props) => {
   const { cartItems, setCartItems } = props;
   const { productId } = useParams();
   const product = allProducts.find((product) => product.id === productId);
-  // const handleAddToCard = () => {
-  //   const isItemInCart = cartItems.find((product) => product.id === productId);
-  //   console.log(isItemInCart);
-  //   if (isItemInCart) {
-  //     setCartItems([1]);
-  //   } else {
-  //     setCartItems([...cartItems, product]);
-  //     console.log(cartItems);
-  //   }
-  // };
 
+  // DRY, FIND A WAY TO BEAUTIFY THE CODE
   const handleAddToCard = () => {
     setCartItems((prev) => {
       const isItemInCart = cartItems.find(
@@ -25,7 +16,6 @@ const ProductPage = (props) => {
       );
 
       if (isItemInCart) {
-        console.log(cartItems);
         return prev.map((item) =>
           item.id === productId ? { ...item, ammount: item.ammount + 1 } : item
         );
@@ -34,6 +24,7 @@ const ProductPage = (props) => {
       }
     });
   };
+
   return (
     <div>
       {product.name}

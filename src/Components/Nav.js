@@ -5,13 +5,12 @@ import Drawer from "@mui/material/Drawer";
 import { React, useState } from "react";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import Badge from "@mui/material/Badge";
+import { Button } from "@mui/material";
 
 const Nav = (props) => {
-  const { cartItems } = props;
+  const { cartItems, handleAddToCard, getTotalItems, handleRemoveFromCart } =
+    props;
   const [openSidebar, setOpenSidebar] = useState(false);
-
-  const getTotalItems = (items) =>
-    items.reduce((ack, item) => ack + item.ammount, 0);
 
   return (
     <div className="navWrapper">
@@ -41,7 +40,39 @@ const Nav = (props) => {
           anchor="right"
           onClose={() => setOpenSidebar(false)}
         >
-          <div>Test</div>
+          <h2>Your shopping cart</h2>
+          {cartItems.length === 0 ? <p>No items in cart.</p> : null}
+          {cartItems.map((item) => (
+            <div key={item.id}>
+              <h3>{item.name}</h3>
+              <div className="information">
+                <p>Price: ${item.price}</p>
+                <p>Total: ${(item.ammount * item.price).toFixed(2)}</p>
+              </div>
+              <div className="buttons">
+                <Button
+                  size="small"
+                  disableElevation
+                  variant="contained"
+                  onClick={() => handleRemoveFromCart(item)}
+                >
+                  {" "}
+                  -{" "}
+                </Button>
+                <p>{item.ammount}</p>
+                <Button
+                  size="small"
+                  disableElevation
+                  variant="contained"
+                  onClick={() => handleAddToCard(item)}
+                >
+                  {" "}
+                  +{" "}
+                </Button>
+              </div>
+              <img src={item.image} alt={item.name} />
+            </div>
+          ))}
         </Drawer>
       </nav>
     </div>
