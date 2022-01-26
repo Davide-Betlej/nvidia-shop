@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/nvidia-shop/static/css/main.5e4ed80d.css",
-    "main.js": "/nvidia-shop/static/js/main.f865416a.js",
+    "main.js": "/nvidia-shop/static/js/main.8a85a7ea.js",
     "static/media/asus-tuf-gaming.png": "/nvidia-shop/static/media/asus-tuf-gaming.ed4d1e9b164f06486b94.png",
     "static/media/asus-rog-strix-b450f-gaming.png": "/nvidia-shop/static/media/asus-rog-strix-b450f-gaming.101c584e19b866b1ba39.png",
     "static/media/rtx-3090.jpg": "/nvidia-shop/static/media/rtx-3090.3aed8e8aecdfcb2e2cf8.jpg",
@@ -23,10 +23,10 @@
     "static/media/logo.png": "/nvidia-shop/static/media/logo.33ffaa50db5774984088.png",
     "index.html": "/nvidia-shop/index.html",
     "main.5e4ed80d.css.map": "/nvidia-shop/static/css/main.5e4ed80d.css.map",
-    "main.f865416a.js.map": "/nvidia-shop/static/js/main.f865416a.js.map"
+    "main.8a85a7ea.js.map": "/nvidia-shop/static/js/main.8a85a7ea.js.map"
   },
   "entrypoints": [
     "static/css/main.5e4ed80d.css",
-    "static/js/main.f865416a.js"
+    "static/js/main.8a85a7ea.js"
   ]
 }
