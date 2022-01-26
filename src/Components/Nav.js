@@ -10,6 +10,9 @@ const Nav = (props) => {
   const { cartItems } = props;
   const [openSidebar, setOpenSidebar] = useState(false);
 
+  const getTotalItems = (items) =>
+    items.reduce((ack, item) => ack + item.ammount, 0);
+
   return (
     <div className="navWrapper">
       <nav className="navigation">
@@ -26,7 +29,7 @@ const Nav = (props) => {
           </ul>
         </div>
         <div className="cartButton">
-          <Badge badgeContent={cartItems.length} color="error">
+          <Badge badgeContent={getTotalItems(cartItems)} color="error">
             <ShoppingBagIcon
               className="navIcon"
               onClick={() => setOpenSidebar(true)}

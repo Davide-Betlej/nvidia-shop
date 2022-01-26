@@ -29,8 +29,9 @@ const ProductPage = (props) => {
         return prev.map((item) =>
           item.id === productId ? { ...item, ammount: item.ammount + 1 } : item
         );
+      } else {
+        return [...prev, { ...product, ammount: 1 }];
       }
-      return [...prev, { ...product, ammount: 1 }];
     });
   };
   return (
