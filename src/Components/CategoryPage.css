@@ -151,3 +151,9 @@ h1 {
     padding: 20px 0 0 0;
   }
 }
+
+@media (min-width: 476px) and (max-width: 780px) {
+  .productContainer ul {
+    gap: 100px 0px;
+  }
+}

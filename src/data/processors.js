@@ -11,6 +11,7 @@ const processors = [
     name: "AMD Ryzen 5 5600X",
     price: 299.0,
     image: ryzen5600X,
+    ammount: 1,
   },
   {
     category: "Processor",
