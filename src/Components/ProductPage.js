@@ -2,6 +2,7 @@ import allProducts from "../data/allProducts";
 import { useParams } from "react-router-dom";
 import { React } from "react";
 import { Button } from "@mui/material";
+import "./ProductPage.css";
 
 const ProductPage = (props) => {
   const { cartItems, setCartItems } = props;
@@ -26,15 +27,18 @@ const ProductPage = (props) => {
   };
 
   return (
-    <div>
-      {product.name}
-      <br></br>
-      {product.price}$<Button onClick={handleAddToCard}>Test</Button>
-      {cartItems.map((item) => (
-        <div key={item.id}>
-          {item.name}, ${item.price}, {item.ammount}
-        </div>
-      ))}
+    <div className="productPageWrapper">
+      <b>{product.name}</b>
+      <br />${product.price}
+      <br />
+      <Button
+        onClick={handleAddToCard}
+        color="success"
+        variant="contained"
+        size="large"
+      >
+        Add to cart
+      </Button>
     </div>
   );
 };

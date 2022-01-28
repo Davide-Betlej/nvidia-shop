@@ -90,7 +90,7 @@ const Nav = (props) => {
           {cartItems.length === 0 ? null : (
             <div className="checkoutButtonWrapper">
               <div className="totalAmount">
-                <p>Total Amount: ${calculateTotal(cartItems).toFixed(2)}</p>
+                <h2>Total Amount: ${calculateTotal(cartItems).toFixed(2)}</h2>
               </div>
               <Button
                 variant="contained"
