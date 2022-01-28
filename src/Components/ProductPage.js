@@ -31,7 +31,7 @@ const ProductPage = (props) => {
       <br></br>
       {product.price}$<Button onClick={handleAddToCard}>Test</Button>
       {cartItems.map((item) => (
-        <div>
+        <div key={item.id}>
           {item.name}, ${item.price}, {item.ammount}
         </div>
       ))}

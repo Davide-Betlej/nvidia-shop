@@ -102,6 +102,20 @@
   gap: 2rem;
 }
 
+.checkoutButtonWrapper {
+  margin-top: 1rem;
+  align-self: center;
+  width: 100%;
+}
+.checkoutButtonWrapper button {
+  width: 100%;
+}
+
+.totalAmount {
+  padding: 1rem 0;
+  font-weight: 800;
+}
+
 @media screen and (max-width: 520px) {
   .drawerProduct {
     display: none;

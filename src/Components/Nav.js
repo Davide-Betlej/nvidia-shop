@@ -8,8 +8,13 @@ import Badge from "@mui/material/Badge";
 import { Button } from "@mui/material";
 
 const Nav = (props) => {
-  const { cartItems, handleAddToCard, getTotalItems, handleRemoveFromCart } =
-    props;
+  const {
+    cartItems,
+    handleAddToCard,
+    getTotalItems,
+    handleRemoveFromCart,
+    calculateTotal,
+  } = props;
   const [openSidebar, setOpenSidebar] = useState(false);
 
   return (
@@ -82,6 +87,21 @@ const Nav = (props) => {
               <img src={item.image} alt={item.name} className="drawerProduct" />
             </div>
           ))}
+          {cartItems.length === 0 ? null : (
+            <div className="checkoutButtonWrapper">
+              <div className="totalAmount">
+                <p>Total Amount: ${calculateTotal(cartItems).toFixed(2)}</p>
+              </div>
+              <Button
+                variant="contained"
+                color="success"
+                size="large"
+                className="checkoutButton"
+              >
+                Checkout
+              </Button>
+            </div>
+          )}
         </Drawer>
       </nav>
     </div>

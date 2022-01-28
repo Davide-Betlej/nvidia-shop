@@ -19,7 +19,6 @@ const RouteSwitch = () => {
       );
 
       if (isItemInCart) {
-        console.log(cartItems);
         return prev.map((item) =>
           item.id === clickedItem.id
             ? { ...item, ammount: item.ammount + 1 }
@@ -43,9 +42,13 @@ const RouteSwitch = () => {
       }, [])
     );
   };
+  const calculateTotal = (items) => {
+    return items.reduce((ack, item) => ack + item.ammount * item.price, 0);
+  };
 
-  const getTotalItems = (items) =>
-    items.reduce((ack, item) => ack + item.ammount, 0);
+  const getTotalItems = (items) => {
+    return items.reduce((ack, item) => ack + item.ammount, 0);
+  };
 
   return (
     <BrowserRouter>
@@ -54,6 +57,7 @@ const RouteSwitch = () => {
         handleAddToCard={handleAddToCard}
         getTotalItems={getTotalItems}
         handleRemoveFromCart={handleRemoveFromCart}
+        calculateTotal={calculateTotal}
       />
       <Routes>
         <Route path="/nvidia-shop" element={<Homepage />} />
