@@ -39,38 +39,47 @@ const Nav = (props) => {
           open={openSidebar}
           anchor="right"
           onClose={() => setOpenSidebar(false)}
+          className="drawer"
         >
-          <h2>Your shopping cart</h2>
+          <h2 className="yourShoppingCart">Your shopping cart</h2>
           {cartItems.length === 0 ? <p>No items in cart.</p> : null}
           {cartItems.map((item) => (
-            <div key={item.id}>
-              <h3>{item.name}</h3>
-              <div className="information">
-                <p>Price: ${item.price}</p>
-                <p>Total: ${(item.ammount * item.price).toFixed(2)}</p>
+            <div key={item.id} className="drawerProductDiv">
+              <div>
+                <h3>{item.name}</h3>
+                <div className="information">
+                  <p>
+                    <b>Price:</b> ${item.price}
+                  </p>
+                  <p>
+                    <b>Total:</b> ${(item.ammount * item.price).toFixed(2)}
+                  </p>
+                </div>
+                <div className="buttons">
+                  <Button
+                    size="small"
+                    disableElevation
+                    variant="contained"
+                    onClick={() => handleRemoveFromCart(item)}
+                  >
+                    {" "}
+                    -{" "}
+                  </Button>
+                  <b>
+                    <p>{item.ammount}</p>
+                  </b>
+                  <Button
+                    size="small"
+                    disableElevation
+                    variant="contained"
+                    onClick={() => handleAddToCard(item)}
+                  >
+                    {" "}
+                    +{" "}
+                  </Button>
+                </div>
               </div>
-              <div className="buttons">
-                <Button
-                  size="small"
-                  disableElevation
-                  variant="contained"
-                  onClick={() => handleRemoveFromCart(item)}
-                >
-                  {" "}
-                  -{" "}
-                </Button>
-                <p>{item.ammount}</p>
-                <Button
-                  size="small"
-                  disableElevation
-                  variant="contained"
-                  onClick={() => handleAddToCard(item)}
-                >
-                  {" "}
-                  +{" "}
-                </Button>
-              </div>
-              <img src={item.image} alt={item.name} />
+              <img src={item.image} alt={item.name} className="drawerProduct" />
             </div>
           ))}
         </Drawer>

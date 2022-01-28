@@ -97,6 +97,36 @@ h1 {
   color: #231f20;
 }
 
+.shopCategories a li {
+  position: relative;
+  padding: 5px 0;
+}
+
+.shopCategories a {
+  text-decoration: none;
+}
+
+.shopCategories a li:hover {
+  opacity: 1;
+}
+
+.shopCategories a li::before {
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #231f20;
+}
+
+.shopCategories a li::before {
+  width: 0%;
+  bottom: 10px;
+}
+
+.shopCategories a li:hover::before {
+  width: 100%;
+}
+
 @media (max-width: 780px) {
   .shopSide {
     width: 80%;

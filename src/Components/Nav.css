@@ -66,3 +66,44 @@
   height: 32px !important;
   cursor: pointer;
 }
+
+.MuiDrawer-paper {
+  padding: 2rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 3rem;
+}
+
+.drawerProduct {
+  width: 180px;
+  float: right;
+  height: 180px;
+  object-fit: contain;
+  background: #f2eeeb;
+}
+
+.productImageWrapper {
+  padding-left: 40px;
+  width: 100%;
+}
+
+.information {
+  display: flex;
+  padding: 1rem 0;
+  gap: 3rem;
+}
+
+.drawerProductDiv {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 520px) {
+  .drawerProduct {
+    display: none;
+  }
+}
