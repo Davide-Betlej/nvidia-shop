@@ -9,7 +9,7 @@
   <li>Calculating the total amount in cart</li>
   <li>Responsive</li>
 </ul>
-<h2>Tech:</h2>
+<h3>Tech:</h3>
 <ul>
   <li>Created with React</li>
   <li>Learned a lot - array manipulation methods methods, MaterialUI, React Router, useParams and CSS (have to learn styled components, currently it's a mess)</li>
